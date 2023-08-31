@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/css/custom.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <title>Берега полуфабрикаты | Оформление заказа</title>
+    <style>
+        .tab-status span.active {
+            background-color: #FF8336;
+            border: 1px solid #FF8336;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-lightBlue">
+    <main class="xs:mt-[60px] mt-[30px] xs:mb-[100px] mb-[50px]">
+        <section>
+            <p class="section-title montserrat-medium">ОФОРМЛЕНИЕ <span class="text-mainOrange font-bold">ЗАКАЗА</span></p>
+            <div class="flex flex-col min-[900px]:max-w-[900px] xs:max-w-[600px] max-xs:w-[90%] w-full mx-auto mt-10 bg-white rounded-[20px] xs:pt-10 pt-5 xs:pb-[30px] pb-5 xs:px-[30px] px-5 relative">
+                <a href="cart.html" class="absolute xs:top-2 left-2 min-[600px]:top-[30px] top-[210px] min-[600px]:left-[30px]">
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.0022 10.9998L1.00216 10.9998" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11 21L0.999999 11L11 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <div class="tab-status flex max-xs:flex-col justify-center items-center xs:gap-5 gap-2.5">
+                    <span class="tab flex justify-center min-w-[140px] max-xs:w-full rounded-full xs:py-[14px] py-2.5 font-medium text-sm text-[#264462] border-[1px] border-[#264462] active">Контакты</span>
+                    <span class="tab flex justify-center min-w-[140px] max-xs:w-full rounded-full xs:py-[14px] py-2.5 font-medium text-sm text-[#264462] border-[1px] border-[#264462]">Доставка</span>
+                    <span class="tab flex justify-center min-w-[140px] max-xs:w-full rounded-full xs:py-[14px] py-2.5 font-medium text-sm text-[#264462] border-[1px] border-[#264462]">Детали</span>
+                </div>
+                <form action="#">
+                    <div role="tab-list">
+                        <div role="tabpanel" id="color" class="tabpanel flex flex-col gap-5 max-w-[300px] w-full mx-auto mt-10">
+                            <p class="font-semibold text-lg text-center">Контактные данные</p>
+                            <input type="text" name="name" class="form-input bg-[#F2F2F2] rounded-full p-3 w-full outline-none transition-all duration-300 focus:border-mainOrange border-[1px] border-[#F2F2F2] placeholder:text-sm placeholder:text-[#7C7C7C] placeholder:font-medium" placeholder="Иванов Дмитрий">
+                            <input type="text" name="phone" class="form-input bg-[#F2F2F2] rounded-full p-3 w-full outline-none transition-all duration-300 focus:border-mainOrange border-[1px] border-[#F2F2F2] placeholder:text-sm placeholder:text-[#7C7C7C] placeholder:font-medium" placeholder="+ 7 905 353 64 23">
+                            <input type="email" name="email" class="form-input bg-[#F2F2F2] rounded-full p-3 w-full outline-none transition-all duration-300 focus:border-mainOrange border-[1px] border-[#F2F2F2] placeholder:text-sm placeholder:text-[#7C7C7C] placeholder:font-medium" placeholder="user@mail.ru">
+                        </div>
+                        <div role="tabpanel" id="hobbies" class="tabpanel hidden flex flex-col gap-5 max-w-[300px] w-full mx-auto mt-10">
+                            <p class="font-semibold text-lg text-center">Способ и адрес доставки</p>
+                            <div class="flex flex-col gap-5">
+                                <div class="flex gap-4">
+                                    <div class="max-xs:w-1/2">
+                                        <input class="peer sr-only radio-input" type="radio" name="delivery" id="pickup" checked>
+                                        <label class="flex-col form-input flex justify-between xs:justify-center items-center xs:min-w-[140px] xs:min-h-[180px] min-h-[140px] rounded-[15px] shadow-[0px_0px_2px_2px_#D7D7D7] cursor-pointer peer-checked:shadow-[0px_0px_2px_2px_#FF8336]" for="pickup">
+                                            <img src="../src/assets/img/photo/pickup.png" alt="">
+                                            <span class="text-sm font-medium mt-3">Самовывоз</span>
+                                        </label>
+                                    </div>
+                                    <div class="max-xs:w-1/2">
+                                        <input class="peer sr-only radio-input" type="radio" name="delivery" id="delivery">
+                                        <label class="flex-col form-input flex justify-between xs:justify-center items-center xs:min-w-[140px] xs:min-h-[180px] min-h-[140px] rounded-[15px] shadow-[0px_0px_2px_2px_#D7D7D7] cursor-pointer peer-checked:shadow-[0px_0px_2px_2px_#FF8336]" for="delivery">
+                                            <img src="../src/assets/img/photo/delivery.png" alt="">
+                                            <span class="text-sm font-medium mt-3">Доставка</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pickupBtn flex items-center w-full rounded-full bg-[#F2F2F2]">
+                                    <div class="flex justify-center items-center w-[46px] h-[46px] rounded-full bg-mainOrange">
+                                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.7125 0.4375C3.82986 0.300293 3.97555 0.190138 4.13954 0.114614C4.30354 0.0390895 4.48195 -1.18758e-05 4.6625 2.70561e-09H15.3375C15.5181 -1.18758e-05 15.6965 0.0390895 15.8605 0.114614C16.0245 0.190138 16.1701 0.300293 16.2875 0.4375L19.5487 4.2425C19.8399 4.58229 20 5.01501 20 5.4625V5.78125C20.0001 6.39997 19.8068 7.00325 19.4473 7.50678C19.0877 8.0103 18.5798 8.38891 17.9946 8.58968C17.4094 8.79045 16.776 8.80336 16.1831 8.62659C15.5901 8.44982 15.0673 8.09221 14.6875 7.60375C14.4102 7.96096 14.0548 8.24997 13.6485 8.44865C13.2423 8.64733 12.796 8.75041 12.3438 8.75C11.8915 8.75051 11.4452 8.64747 11.0389 8.44878C10.6326 8.25009 10.2773 7.96103 10 7.60375C9.72274 7.96103 9.36736 8.25009 8.9611 8.44878C8.55485 8.64747 8.10849 8.75051 7.65625 8.75C7.20401 8.75051 6.75765 8.64747 6.3514 8.44878C5.94514 8.25009 5.58976 7.96103 5.3125 7.60375C4.93274 8.09221 4.40985 8.44982 3.81692 8.62659C3.22399 8.80336 2.59065 8.79045 2.00541 8.58968C1.42017 8.38891 0.912278 8.0103 0.552728 7.50678C0.193177 7.00325 -6.82482e-05 6.39997 1.80807e-08 5.78125V5.4625C1.57594e-05 5.01501 0.160071 4.58229 0.45125 4.2425L3.71375 0.43625L3.7125 0.4375ZM5.9375 5.78125C5.9375 6.23709 6.11858 6.67426 6.44091 6.99659C6.76324 7.31892 7.20041 7.5 7.65625 7.5C8.11209 7.5 8.54926 7.31892 8.87159 6.99659C9.19392 6.67426 9.375 6.23709 9.375 5.78125C9.375 5.61549 9.44085 5.45652 9.55806 5.33931C9.67527 5.2221 9.83424 5.15625 10 5.15625C10.1658 5.15625 10.3247 5.2221 10.4419 5.33931C10.5592 5.45652 10.625 5.61549 10.625 5.78125C10.625 6.23709 10.8061 6.67426 11.1284 6.99659C11.4507 7.31892 11.8879 7.5 12.3438 7.5C12.7996 7.5 13.2368 7.31892 13.5591 6.99659C13.8814 6.67426 14.0625 6.23709 14.0625 5.78125C14.0625 5.61549 14.1283 5.45652 14.2456 5.33931C14.3628 5.2221 14.5217 5.15625 14.6875 5.15625C14.8533 5.15625 15.0122 5.2221 15.1294 5.33931C15.2467 5.45652 15.3125 5.61549 15.3125 5.78125C15.3125 6.23709 15.4936 6.67426 15.8159 6.99659C16.1382 7.31892 16.5754 7.5 17.0312 7.5C17.4871 7.5 17.9243 7.31892 18.2466 6.99659C18.5689 6.67426 18.75 6.23709 18.75 5.78125V5.4625C18.75 5.31353 18.6968 5.16946 18.6 5.05625L15.3375 1.25H4.6625L1.4 5.05625C1.30318 5.16946 1.24999 5.31353 1.25 5.4625V5.78125C1.25 6.23709 1.43108 6.67426 1.75341 6.99659C2.07574 7.31892 2.51291 7.5 2.96875 7.5C3.42459 7.5 3.86176 7.31892 4.18409 6.99659C4.50642 6.67426 4.6875 6.23709 4.6875 5.78125C4.6875 5.61549 4.75335 5.45652 4.87056 5.33931C4.98777 5.2221 5.14674 5.15625 5.3125 5.15625C5.47826 5.15625 5.63723 5.2221 5.75444 5.33931C5.87165 5.45652 5.9375 5.61549 5.9375 5.78125ZM1.875 9.375C2.04076 9.375 2.19973 9.44085 2.31694 9.55806C2.43415 9.67527 2.5 9.83424 2.5 10V17.5H17.5V10C17.5 9.83424 17.5658 9.67527 17.6831 9.55806C17.8003 9.44085 17.9592 9.375 18.125 9.375C18.2908 9.375 18.4497 9.44085 18.5669 9.55806C18.6842 9.67527 18.75 9.83424 18.75 10V17.5H19.375C19.5408 17.5 19.6997 17.5658 19.8169 17.6831C19.9342 17.8003 20 17.9592 20 18.125C20 18.2908 19.9342 18.4497 19.8169 18.5669C19.6997 18.6842 19.5408 18.75 19.375 18.75H0.625C0.45924 18.75 0.300269 18.6842 0.183058 18.5669C0.0658481 18.4497 1.80807e-08 18.2908 1.80807e-08 18.125C1.80807e-08 17.9592 0.0658481 17.8003 0.183058 17.6831C0.300269 17.5658 0.45924 17.5 0.625 17.5H1.25V10C1.25 9.83424 1.31585 9.67527 1.43306 9.55806C1.55027 9.44085 1.70924 9.375 1.875 9.375ZM4.375 10C4.54076 10 4.69973 10.0658 4.81694 10.1831C4.93415 10.3003 5 10.4592 5 10.625V15H15V10.625C15 10.4592 15.0658 10.3003 15.1831 10.1831C15.3003 10.0658 15.4592 10 15.625 10C15.7908 10 15.9497 10.0658 16.0669 10.1831C16.1842 10.3003 16.25 10.4592 16.25 10.625V15C16.25 15.3315 16.1183 15.6495 15.8839 15.8839C15.6495 16.1183 15.3315 16.25 15 16.25H5C4.66848 16.25 4.35054 16.1183 4.11612 15.8839C3.8817 15.6495 3.75 15.3315 3.75 15V10.625C3.75 10.4592 3.81585 10.3003 3.93306 10.1831C4.05027 10.0658 4.20924 10 4.375 10Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <span class="textsm font-medium text-[#7C7C7C] whitespace-nowrap mx-auto">г. Томск, ул. Гагарина 31</span>
+                                </div>
+                                <div 
+                                class="deliveryBtn flex justify-between items-center bg-[#F2F2F2] rounded-full w-full px-4 h-[46px] cursor-pointer hidden"
+                                data-te-toggle="modal"
+                                data-te-target="#chooseAddress"
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                                >
+                                    <span class="textsm font-medium text-[#7C7C7C]">Выберите адрес</span>
+                                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.15027 3.19524L7.28724 0.16792C7.51943 -0.0559732 7.89487 -0.0559732 8.12459 0.16792C8.3543 0.391812 8.3543 0.753852 8.12459 0.977745L4.57018 4.40759C4.3454 4.62434 3.98478 4.6291 3.75259 4.42427L0.173482 0.980126C0.0573892 0.86818 0.000577894 0.720506 0.000577901 0.575214C0.000577907 0.429922 0.0573892 0.282248 0.173482 0.170301C0.405667 -0.0535916 0.781115 -0.0535915 1.01083 0.170301L4.15027 3.19524Z" fill="#7C7C7C"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" id="occupation" class="tabpanel hidden flex flex-col gap-5 max-w-[300px] w-full mx-auto mt-10">
+                            <p class="font-semibold text-lg text-center">Детали заказа</p>
+                            <div class="flex flex-col gap-5">
+                                <ul class="flex flex-col gap-5">
+                                    <li class="flex justify-between">
+                                        <span class="text-sm">3 товара</span>
+                                        <span class="text-sm">1950 ₽</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span class="text-sm">Промокод</span>
+                                        <span class="text-sm">0 ₽</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span class="text-sm">Доставка</span>
+                                        <span class="text-sm">50 ₽</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-full h-[1px] bg-[#7C7C7C]"></div>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span class="font-semibold">Всего к оплате:</span>
+                                        <span class="font-semibold">2000 ₽</span>
+                                    </li>
+                                    <li class="flex justify-between w-full gap-4">
+                                        <div class="w-1/2">
+                                            <input class="peer sr-only radio-input" type="radio" name="payment" id="cash">
+                                            <label class="form-input flex justify-center items-center py-2 rounded-[10px] shadow-[0px_0px_2px_1px_#D7D7D7] cursor-pointer peer-checked:shadow-[0px_0px_2px_2px_#FF8336]" for="cash">
+                                                Наличными
+                                            </label>
+                                        </div>
+                                        <div class="w-1/2">
+                                            <input class="peer sr-only radio-input" type="radio" name="payment" id="card">
+                                            <label class="form-input flex justify-center items-center py-2 rounded-[10px] shadow-[0px_0px_2px_1px_#D7D7D7] cursor-pointer peer-checked:shadow-[0px_0px_2px_2px_#FF8336]" for="card">
+                                                По карте
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full xs:gap-4 gap-2 flex items-center justify-between mt-12">
+                        <a class="btn w-fit flex justify-center py-2 px-7 rounded-full bg-mainOrange text-white cursor-pointer hidden" id="prev">Назад</a>
+                        <a class="btn w-fit flex justify-center py-2 px-7 rounded-full bg-mainOrange text-white ml-auto cursor-pointer" id="next">Далее</a>
+                        <button class="btn-submit w-fit flex justify-center py-2 xs:px-7 px-3 whitespace-nowrap rounded-full bg-mainOrange text-white hidden" id="submit">Оформить заказ</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Choose Address -->
+    <div
+    data-te-modal-init
+    class="fixed left-0 top-0 z-[1055] hidden h-full w-full "
+    id="chooseAddress"
+    tabindex="-1"
+    aria-labelledby="chooseAddressLabel"
+    aria-hidden="true">
+    <div
+      data-te-modal-dialog-ref
+      class="pointer-events-none relative w-auto xs:top-1/2 xs:-translate-y-1/2 opacity-0 transition-all duration-300 ease-in-out xs:mx-auto min-[900px]:max-w-[520px] md:w-[90%] xs:w-[95%] w-full">
+      <div
+        class="pointer-events-auto relative flex w-full flex-col xs:rounded-[20px] overflow-hidden bg-white">
+          <button
+            type="button"
+            class="absolute xs:top-[40px] right-[30px] top-5 z-20 w-fit"
+            data-te-modal-dismiss
+            aria-label="Close">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L21 21M1 21L21 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+  
+        <!--Modal body-->
+        <div class="flex flex-col xs:px-16 px-8 xs:py-10 py-5 xs:min-h-[500px] max-xs:min-h-screen" data-te-modal-body-ref>
+            <p class="text-2xl font-semibold text-center max-xs:mt-10">Сохраненные адреса</p>
+            <div class="flex flex-col xs:gap-5 gap-2 xs:mt-10 mt-[30px] h-full">
+                <div class="flex flex-col">
+                    <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Дом:</p>
+                    <div class="w-full rounded-full bg-[#F2F2F2] px-4 py-[13px]">
+                        <input type="radio" class="addressProfile" name="address" id="address" checked><label for="address" class="w-full">ул. Афанасьева 34, кв 89</label>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Работа:</p>
+                    <div class="w-full rounded-full bg-[#F2F2F2] px-4 py-[13px]">
+                        <input type="radio" class="addressProfile" name="address" id="address1"><label for="address1" class="w-full">ул. Афанасьева 34, кв 89</label>
+                    </div>
+                </div>
+                <button
+                class="flex justify-center font-semibold text-sm text-white w-full rounded-full bg-mainOrange xs:py-[14px] py-2.5 xs:mt-[100px] mt-[50px] hover-button"
+                data-te-toggle="modal"
+                data-te-target="#openMap"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                >Добавить адрес</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Modal Map -->
+    <div
+    data-te-modal-init
+    class="fixed left-0 top-0 z-[1055] hidden h-full w-full "
+    id="openMap"
+    tabindex="-1"
+    aria-labelledby="openMapLabel"
+    aria-hidden="true">
+        <div
+            data-te-modal-dialog-ref
+            class="pointer-events-none relative top-1/2 -translate-y-1/2 opacity-0 transition-all duration-300 ease-in-out xs:mx-auto min-[900px]:max-w-[900px] md:w-[90%] xs:w-[95%] w-full">
+            <div class="pointer-events-auto flex flex-col w-full xs:rounded-[35px] pt-10 p-5 overflow-hidden bg-white">
+                <div class="flex justify-between items-center">
+                    <button
+                    type="button"
+                    class="w-fit"
+                    data-te-modal-dismiss
+                    aria-label="Close">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.0022 10.9998L1.00219 10.9998" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11 21L0.999999 11L11 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <p class="xs:text-[26px] text-xl font-medium">Выберите адрес</p>
+                    <div class="flex justify-center items-center rounded-full bg-mainOrange w-10 h-10">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.2075 11.175C12.5525 12.5025 11.665 13.825 10.7575 15.0125C9.89662 16.132 8.97612 17.2044 8 18.225C7.02385 17.2044 6.10336 16.132 5.2425 15.0125C4.335 13.825 3.4475 12.5025 2.7925 11.175C2.13 9.83375 1.75 8.5775 1.75 7.5C1.75 5.8424 2.40848 4.25269 3.58058 3.08058C4.75269 1.90848 6.3424 1.25 8 1.25C9.6576 1.25 11.2473 1.90848 12.4194 3.08058C13.5915 4.25269 14.25 5.8424 14.25 7.5C14.25 8.5775 13.8688 9.83375 13.2075 11.175ZM8 20C8 20 15.5 12.8925 15.5 7.5C15.5 5.51088 14.7098 3.60322 13.3033 2.1967C11.8968 0.790176 9.98912 0 8 0C6.01088 0 4.10322 0.790176 2.6967 2.1967C1.29018 3.60322 0.5 5.51088 0.5 7.5C0.5 12.8925 8 20 8 20Z" fill="white"/>
+                            <path d="M8 10C7.33696 10 6.70107 9.73661 6.23223 9.26777C5.76339 8.79893 5.5 8.16304 5.5 7.5C5.5 6.83696 5.76339 6.20107 6.23223 5.73223C6.70107 5.26339 7.33696 5 8 5C8.66304 5 9.29893 5.26339 9.76777 5.73223C10.2366 6.20107 10.5 6.83696 10.5 7.5C10.5 8.16304 10.2366 8.79893 9.76777 9.26777C9.29893 9.73661 8.66304 10 8 10ZM8 11.25C8.99456 11.25 9.94839 10.8549 10.6517 10.1517C11.3549 9.44839 11.75 8.49456 11.75 7.5C11.75 6.50544 11.3549 5.55161 10.6517 4.84835C9.94839 4.14509 8.99456 3.75 8 3.75C7.00544 3.75 6.05161 4.14509 5.34835 4.84835C4.64509 5.55161 4.25 6.50544 4.25 7.5C4.25 8.49456 4.64509 9.44839 5.34835 10.1517C6.05161 10.8549 7.00544 11.25 8 11.25Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex max-xs:flex-col xs:gap-5 gap-2.5 mt-6">
+                    <div class="relative w-full">
+                        <button class="absolute top-1/2 -translate-y-1/2 right-4">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.55987 15.3945C9.21563 15.3941 10.8237 14.8224 12.128 13.7704L16.2287 18L17.5478 16.6395L13.447 12.4099C14.4675 11.0645 15.0222 9.40549 15.0226 7.69724C15.0226 3.45318 11.6746 0 7.55987 0C3.44512 0 0.097168 3.45318 0.097168 7.69724C0.097168 11.9413 3.44512 15.3945 7.55987 15.3945ZM7.55987 1.92431C10.6466 1.92431 13.1569 4.51347 13.1569 7.69724C13.1569 10.881 10.6466 13.4702 7.55987 13.4702C4.47311 13.4702 1.96284 10.881 1.96284 7.69724C1.96284 4.51347 4.47311 1.92431 7.55987 1.92431Z" fill="#A1A1A1"/>
+                            </svg>
+                        </button>
+                        <input type="text" class="rounded-full bg-[#EEEEEE] py-2.5 px-3 pr-10 w-full outline-none placeholder:font-medium placeholder:text-sm" placeholder="Введите улицу или дом">
+                    </div>
+                    <button class="text-sm font-semibold text-white rounded-full bg-mainOrange py-2.5 px-6 hover-button">Продолжить</button>
+                </div>
+                <div class="rounded-[25px] mt-5 overflow-hidden relative">
+                    <div class="absolute bottom-2.5 right-2.5 max-xs:left-2.5 rounded-[25px] xs:px-[30px] xs:py-6 px-4 py-2 bg-white shadow-[0px_0px_14px_rgba(0,0,0,0.20)] z-20">
+                        <div class="flex items-center gap-6">
+                            <p class="font-bold leading-[1.1]">Извините, сюда не доставляем</p>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L11 11M1 11L11 1" stroke="black" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <p class="text-xs font-medium max-xs:mt-2">Измените адрес.</p>
+                    </div>
+                    <iframe class="h-[400px] w-full" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8822c1b1522c1b72777869319c0df326027532ac510031450ac8eff1c5a3cf44&amp;source=constructor" frameborder="0"></iframe>                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Библиотеки -->
+    <script src="../src/assets/libs/jquery.js"></script>
+    <script src="../src/assets/libs/swiper.js"></script>
+    <script src="../src/assets/libs/tailwindElements.js"></script>
+    <!-- Скрипты -->
+    <script src="../src/assets/js/custom.js"></script>
+    <script src="../src/assets/js/multistep.js"></script>
+    <script src="../src/assets/js/slider.js"></script>
+</body>
+
+</html>

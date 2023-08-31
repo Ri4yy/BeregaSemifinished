@@ -1,0 +1,104 @@
+@import url('fonts.css');
+@import url('swiper.css');
+@import url('tailwindElements.css');
+
+html,
+body {
+    /* scrollbar-gutter: stable; */
+    /* overflow-x: hidden; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FF8336;
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: 0 !important;
+}
+
+[data-te-nav-active] svg {
+    fill: white;
+}
+
+[data-te-nav-active] span {
+    color: white;
+    font-weight: 700;
+}
+
+.header_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    backdrop-filter: blur(4px); 
+    background: rgba(236,242,248,0.4) !important;
+    padding: 0 !important;
+}
+
+
+.addressProfile:checked, 
+.addressProfile:not(:checked) 
+{
+    display: none;
+}
+
+.addressProfile:checked + label, 
+.addressProfile:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.addressProfile:checked + label:before, 
+.addressProfile:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #FF8336;
+    background-color: #ffffff;
+}
+
+.addressProfile:checked + label:before, 
+.addressProfile:not(:checked) + label:before {
+    border-radius: 100%;
+}
+
+.addressProfile:checked + label:after, 
+.addressProfile:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.addressProfile:checked + label:after, 
+.addressProfile:not(:checked) + label:after {
+    right: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #FF8336;
+}
+
+.addressProfile:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.addressProfile:checked + label:after {
+    opacity: 1;
+}

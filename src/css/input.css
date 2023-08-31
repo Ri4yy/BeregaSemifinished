@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply flex flex-col min-h-screen
+}
+.container {
+    @apply max-[1920px]:max-w-[1240px] mx-auto
+}
+
+footer {
+    @apply mt-auto
+}
+
+.hover-button {
+    @apply hover:bg-[#da814a] active:bg-[#ffa167] transition-colors duration-300
+}
+
+.section-title {
+    @apply text-[#264462] xs:text-[32px] text-xl text-center leading-[1.1]
+}

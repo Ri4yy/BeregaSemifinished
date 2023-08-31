@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/css/custom.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <title>Берега полуфабрикаты | Профиль</title>
+</head>
+<body class="bg-lightBlue">
+
+    <main class="xs:mt-[60px] mt-[30px] xs:mb-[100px] mb-[50px]">
+        <section class="container">
+            <p class="section-title montserrat-medium">ЛИЧНЫЙ <span class="text-mainOrange font-bold">КАБИНЕТ</span></p>
+            <div class="flex justify-center xs:mt-10 mt-[30px]">
+            <ul
+                class="flex items-center min-[560px]:gap-5 gap-2"
+                role="tablist"
+                data-te-nav-ref>
+                    <li role="presentation">
+                        <a
+                        href="#tabs-profile"
+                        class="flex justify-center px-12 min-[560px]:py-4 py-2 min-[560px]:min-w-[160px] max-w-[93px] rounded-full border-[1px] border-[#264462] bg-transparent min-[560px]:text-sm text-[13px] text-[#264462] data-[te-nav-active]:bg-mainOrange data-[te-nav-active]:text-white data-[te-nav-active]:border-mainOrange data-[te-nav-active]:font-bold"
+                        data-te-toggle="pill"
+                        data-te-target="#tabs-profile"
+                        data-te-nav-active
+                        role="tab"
+                        aria-controls="tabs-profile"
+                        aria-selected="true"
+                        >Профиль</a>
+                    </li>
+                    <li role="presentation">
+                        <a
+                        href="#tabs-orders"
+                        class="flex justify-center px-12 min-[560px]:py-4 py-2 min-[560px]:min-w-[160px] max-w-[93px] rounded-full border-[1px] border-[#264462] bg-transparent min-[560px]:text-sm text-[13px] text-[#264462] data-[te-nav-active]:bg-mainOrange data-[te-nav-active]:text-white data-[te-nav-active]:border-mainOrange data-[te-nav-active]:font-bold"
+                        data-te-toggle="pill"
+                        data-te-target="#tabs-orders"
+                        role="tab"
+                        aria-controls="tabs-orders"
+                        aria-selected="false"
+                        >Заказы</a>
+                    </li>
+                    <li role="presentation">
+                        <a
+                        href="#tabs-address"
+                        class="flex justify-center px-12 min-[560px]:py-4 py-2 min-[560px]:min-w-[160px] max-w-[93px] rounded-full border-[1px] border-[#264462] bg-transparent min-[560px]:text-sm text-[13px] text-[#264462] data-[te-nav-active]:bg-mainOrange data-[te-nav-active]:text-white data-[te-nav-active]:border-mainOrange data-[te-nav-active]:font-bold"
+                        data-te-toggle="pill"
+                        data-te-target="#tabs-address"
+                        role="tab"
+                        aria-controls="tabs-address"
+                        aria-selected="false"
+                        >Адреса</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Tabs content-->
+            <div class="max-w-[800px] mx-auto mt-10">
+            <div
+                class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+                id="tabs-profile"
+                role="tabpanel"
+                aria-labelledby="tabs-profile-tab"
+                data-te-tab-active>
+                <div class="flex flex-col gap-5 max-w-[520px] mx-auto">
+                    <div class="flex flex-col rounded-[35px] xs:px-10 xs:py-[30px] px-5 py-5 bg-white relative">
+                        <div class="flex gap-10">
+                            <img src="../src/assets/img/photo/mail.png" class="object-contain max-xs:hidden" alt="">
+                            <div class="flex flex-col w-full">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-bold">Подпишись!</p>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" class="stroke-black cursor-pointer hover:scale-[0.85] hover:stroke-mainOrange transition-all duration-500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L21 21M1 21L21 1" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <p class="text-sm mt-4 leading-[1.1]">Чтобы не пропустить специальные предложения, скидки и промокоды</p>
+                            </div>
+                        </div>
+                        <form action="#" class="w-full relative mt-[30px]">
+                            <input type="text" class="w-full pl-4 xs:pr-[150px] pr-[110px] xs:py-[14px] py-2.5 rounded-full bg-[#F2F2F2] outline-none placeholder:text-sm placeholder:font-medium" placeholder="Введи свою почту">
+                            <button type="submit" class="flex justify-center items-center bg-mainOrange rounded-full text-white font-medium text-sm absolute top-0 right-0 h-full xs:min-w-[140px] min-w-[100px]">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="rounded-[35px] min-[560px]:py-10 min-[560px]:px-16 xs:py-6 xs:px-10 px-5 py-5 bg-white relative">
+                        <a href="#" class="flex justify-center items-center absolute min-[560px]:top-10 right-5 w-10 h-10 rounded-full bg-mainOrange">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.3335 14.1667L17.5002 10L13.3335 5.83337" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.5 10H7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <p class="text-2xl font-semibold xs:text-center">Ваши данные</p>
+                        <form action="#" class="flex flex-col xs:gap-5 gap-2 xs:mt-10 mt-[30px]">
+                            <label class="flex flex-col">
+                                <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Ваше имя:</p>
+                                <input type="text" name="fio" class="xs:p-4 px-4 py-2 rounded-full bg-[#F2F2F2] outline-none transition-all duration-300 focus:border-mainOrange border-[1px] border-[#F2F2F2]  placeholder:text-sm placeholder:text-[#7C7C7C] placeholder:font-medium" placeholder="Иванов Дмитрий Алексеевич">
+                            </label>
+                            <label class="flex flex-col">
+                                <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Телефон:</p>
+                                <input type="text" name="phone" class="xs:p-4 px-4 py-2 rounded-full bg-[#F2F2F2] outline-none transition-all duration-300 focus:border-mainOrange border-[1px] border-[#F2F2F2]  placeholder:text-sm placeholder:text-[#7C7C7C] placeholder:font-medium" placeholder="+7 (901) 234-42-23">
+                            </label>
+                            <label class="flex flex-col">
+                                <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Email:</p>
+                                <input type="email" name="email" class="xs:p-4 px-4 py-2 rounded-full bg-[#F2F2F2] outline-none transition-all duration-300 focus:border-mainOrange border-[1px] border-[#F2F2F2]  placeholder:text-sm placeholder:text-[#7C7C7C] placeholder:font-medium" placeholder="user@mail.ru">
+                            </label>
+                            <button type="submit" class="font-semibold text-sm text-white w-full rounded-full bg-mainOrange xs:py-[14px] py-2.5 mt-5 hover-button">Редактировать</button>
+                            <a href="#" class="text-sm font-medium text-center">Восстановить пароль</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+                id="tabs-orders"
+                role="tabpanel"
+                aria-labelledby="tabs-orders-tab">
+                <div class="flex flex-col md:gap-5 gap-2.5">
+                    <div class="flex flex-col rounded-[20px] bg-white md:p-10 p-5">
+                        <span class="font-bold text-xs text-[#29C2EC]">В ОБРАБОТКЕ</span>
+                        <ul class="flex max-md:flex-col md:justify-between md:items-center max-md:mt-2.5">
+                            <li class="md:w-[60%]"><p class="font-semibold">Заказ №5 от 22.07.2023</p></li>
+                            <li class="flex items-center gap-10 justify-between grow shrink-0 md:mr-10">
+                                <p class="text-sm">1 позиция</p>
+                                <p class="text-lg font-semibold">1550 ₽</p>
+                            </li>
+                            <li class="md:ml-auto max-md:mt-5">
+                                <button class="flex justify-center md:py-3 py-2 px-5 min-w-[105px] max-md:w-full rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Отменить</button>
+                            </li>
+                        </ul>
+                        <div class="wrapperOrder flex flex-col max-md:mt-2.5">
+                            <button class="moreBtn text-xs flex items-center gap-1 w-fit max-md:mx-auto">
+                                <span class="pointer-events-none font-inter font-medium">Подробнее о заказе</span>  
+                                <svg width="10" height="6" viewBox="0 0 10 6" class="mt-[2px] transition-all duration-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4.0417L8.47266 0.566309C8.72969 0.309277 9.14531 0.309277 9.39961 0.566309C9.65391 0.82334 9.65391 1.23896 9.39961 1.496L5.46484 5.4335C5.21602 5.68232 4.8168 5.68779 4.55977 5.45264L0.597656 1.49873C0.469141 1.37021 0.40625 1.20068 0.40625 1.03389C0.40625 0.86709 0.469141 0.697558 0.597656 0.569043C0.854688 0.312012 1.27031 0.312012 1.52461 0.569043L5 4.0417Z" fill="black"/>
+                                </svg>
+                            </button>
+                            <div class="innerOrderInfo flex flex-col md:mt-10 mt-[30px] hidden">
+                                <ul class="flex flex-col gap-2.5">
+                                    <li><p class="font-semibold">Получатель</p></li>
+                                    <li><p class="text-xs">Иванов Виктор Алексеевич</p></li>
+                                    <li><p class="text-xs">+ 7 (906) 346-32-76</p></li>
+                                    <li><p class="text-xs">user@mail.ru</p></li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="flex flex-col w-[60%]">
+                                        <p class="font-semibold">Оплата</p>
+                                        <p class="text-xs mt-2.5">Счет №3 от 20.07.2023, оплата при получении</p>
+                                    </li>
+                                    <li class="flex items-center justify-end gap-10 grow shrink-0 min-[560px]:mr-10">
+                                        <p class="font-bold text-xs text-[#FF0000]">НЕ ОПЛАЧЕНО</p>
+                                    </li>
+                                    <li class="ml-auto max-[560px]:hidden">
+                                        <button class="flex justify-center py-3 px-5 min-w-[105px] rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Оплатить</button>
+                                    </li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="w-[60%]">
+                                        <ul class="flex flex-col gap-2.5">
+                                            <li><p class="font-semibold">Доставка</p></li>
+                                            <li><p class="text-xs">Адрес: ул. Афанасьева 35, кв. 76</p></li>
+                                            <li><p class="text-xs">Служба доставки: Доставка курьером</p></li>
+                                            <li><p class="text-xs">Статус отгрузки: Ожидает обработки</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="flex justify-end grow shrink-0 min-[560px]:mr-10">
+                                        <p class="text-lg font-semibold">100 ₽</p>
+                                    </li>
+                                    <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                </ul>
+                                <ul class="flex flex-col gap-5 mt-5">
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-[20px] bg-white md:p-10 p-5">
+                        <span class="font-bold text-xs text-[#FF8336]">ПРИНЯТ КУРЬЕРОМ</span>
+                        <ul class="flex max-md:flex-col md:justify-between md:items-center max-md:mt-2.5">
+                            <li class="md:w-[60%]"><p class="font-semibold">Заказ №4 от 03.07.2023</p></li>
+                            <li class="flex items-center gap-10 justify-between grow shrink-0 md:mr-10">
+                                <p class="text-sm">1 позиция</p>
+                                <p class="text-lg font-semibold">450 ₽</p>
+                            </li>
+                            <li class="md:ml-auto max-md:mt-5">
+                                <button class="flex justify-center md:py-3 py-2 px-5 min-w-[105px] max-md:w-full rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Отменить</button>
+                            </li>
+                        </ul>
+                        <div class="wrapperOrder flex flex-col max-md:mt-2.5">
+                            <button class="moreBtn text-xs flex items-center gap-1 w-fit max-md:mx-auto">
+                                <span class="pointer-events-none">Подробнее о заказе</span>  
+                                <svg width="10" height="6" viewBox="0 0 10 6" class="mt-[2px] transition-all duration-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4.0417L8.47266 0.566309C8.72969 0.309277 9.14531 0.309277 9.39961 0.566309C9.65391 0.82334 9.65391 1.23896 9.39961 1.496L5.46484 5.4335C5.21602 5.68232 4.8168 5.68779 4.55977 5.45264L0.597656 1.49873C0.469141 1.37021 0.40625 1.20068 0.40625 1.03389C0.40625 0.86709 0.469141 0.697558 0.597656 0.569043C0.854688 0.312012 1.27031 0.312012 1.52461 0.569043L5 4.0417Z" fill="black"/>
+                                </svg>
+                            </button>
+                            <div class="innerOrderInfo flex flex-col md:mt-10 mt-[30px] hidden">
+                                <ul class="flex flex-col gap-2.5">
+                                    <li><p class="font-semibold">Получатель</p></li>
+                                    <li><p class="text-xs">Иванов Виктор Алексеевич</p></li>
+                                    <li><p class="text-xs">+ 7 (906) 346-32-76</p></li>
+                                    <li><p class="text-xs">user@mail.ru</p></li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="flex flex-col w-[60%]">
+                                        <p class="font-semibold">Оплата</p>
+                                        <p class="text-xs mt-2.5">Счет №3 от 20.07.2023, оплата при получении</p>
+                                    </li>
+                                    <li class="flex items-center justify-end gap-10 grow shrink-0 min-[560px]:mr-10">
+                                        <p class="font-bold text-xs text-[#FF0000]">НЕ ОПЛАЧЕНО</p>
+                                    </li>
+                                    <li class="ml-auto max-[560px]:hidden">
+                                        <button class="flex justify-center py-3 px-5 min-w-[105px] rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Оплатить</button>
+                                    </li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="w-[60%]">
+                                        <ul class="flex flex-col gap-2.5">
+                                            <li><p class="font-semibold">Доставка</p></li>
+                                            <li><p class="text-xs">Адрес: ул. Афанасьева 35, кв. 76</p></li>
+                                            <li><p class="text-xs">Служба доставки: Доставка курьером</p></li>
+                                            <li><p class="text-xs">Статус отгрузки: Ожидает обработки</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="flex justify-end grow shrink-0 min-[560px]:mr-10">
+                                        <p class="text-lg font-semibold">100 ₽</p>
+                                    </li>
+                                    <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                </ul>
+                                <ul class="flex flex-col gap-5 mt-5">
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-[20px] bg-white md:p-10 p-5">
+                        <span class="font-bold text-xs text-[#8B2AB2]">В ПУТИ</span>
+                        <ul class="flex max-md:flex-col md:justify-between md:items-center max-md:mt-2.5">
+                            <li class="md:w-[60%]"><p class="font-semibold">Заказ №3 от 01.06.2023</p></li>
+                            <li class="flex items-center gap-10 justify-between grow shrink-0 md:mr-10">
+                                <p class="text-sm">1 позиция</p>
+                                <p class="text-lg font-semibold">450 ₽</p>
+                            </li>
+                            <li class="md:ml-auto max-md:mt-5">
+                                <button class="flex justify-center md:py-3 py-2 px-5 min-w-[105px] max-md:w-full rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Повторить</button>
+                            </li>
+                        </ul>
+                        <div class="wrapperOrder flex flex-col max-md:mt-2.5">
+                            <button class="moreBtn text-xs flex items-center gap-1 w-fit max-md:mx-auto">
+                                <span class="pointer-events-none">Подробнее о заказе</span>  
+                                <svg width="10" height="6" viewBox="0 0 10 6" class="mt-[2px] transition-all duration-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4.0417L8.47266 0.566309C8.72969 0.309277 9.14531 0.309277 9.39961 0.566309C9.65391 0.82334 9.65391 1.23896 9.39961 1.496L5.46484 5.4335C5.21602 5.68232 4.8168 5.68779 4.55977 5.45264L0.597656 1.49873C0.469141 1.37021 0.40625 1.20068 0.40625 1.03389C0.40625 0.86709 0.469141 0.697558 0.597656 0.569043C0.854688 0.312012 1.27031 0.312012 1.52461 0.569043L5 4.0417Z" fill="black"/>
+                                </svg>
+                            </button>
+                            <div class="innerOrderInfo flex flex-col md:mt-10 mt-[30px] hidden">
+                                <ul class="flex flex-col gap-2.5">
+                                    <li><p class="font-semibold">Получатель</p></li>
+                                    <li><p class="text-xs">Иванов Виктор Алексеевич</p></li>
+                                    <li><p class="text-xs">+ 7 (906) 346-32-76</p></li>
+                                    <li><p class="text-xs">user@mail.ru</p></li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="flex flex-col w-[60%]">
+                                        <p class="font-semibold">Оплата</p>
+                                        <p class="text-xs mt-2.5">Счет №3 от 20.07.2023, оплата при получении</p>
+                                    </li>
+                                    <li class="flex items-center justify-end gap-10 grow shrink-0 min-[560px]:mr-10">
+                                        <p class="font-bold text-xs text-[#FF0000]">НЕ ОПЛАЧЕНО</p>
+                                    </li>
+                                    <li class="ml-auto max-[560px]:hidden">
+                                        <button class="flex justify-center py-3 px-5 min-w-[105px] rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Оплатить</button>
+                                    </li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="w-[60%]">
+                                        <ul class="flex flex-col gap-2.5">
+                                            <li><p class="font-semibold">Доставка</p></li>
+                                            <li><p class="text-xs">Адрес: ул. Афанасьева 35, кв. 76</p></li>
+                                            <li><p class="text-xs">Служба доставки: Доставка курьером</p></li>
+                                            <li><p class="text-xs">Статус отгрузки: Ожидает обработки</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="flex justify-end grow shrink-0 min-[560px]:mr-10">
+                                        <p class="text-lg font-semibold">100 ₽</p>
+                                    </li>
+                                    <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                </ul>
+                                <ul class="flex flex-col gap-5 mt-5">
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-[20px] bg-white md:p-10 p-5">
+                        <span class="font-bold text-xs text-[#25A53C]">ДОСТАВЛЕНО</span>
+                        <ul class="flex max-md:flex-col md:justify-between md:items-center max-md:mt-2.5">
+                            <li class="md:w-[60%]"><p class="font-semibold">Заказ №2 от 20.07.2023</p></li>
+                            <li class="flex items-center gap-10 justify-between grow shrink-0 md:mr-10">
+                                <p class="text-sm">1 позиция</p>
+                                <p class="text-lg font-semibold">1550 ₽</p>
+                            </li>
+                            <li class="md:ml-auto max-md:mt-5">
+                                <button class="flex justify-center md:py-3 py-2 px-5 min-w-[105px] max-md:w-full rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Повторить</button>
+                            </li>
+                        </ul>
+                        <div class="wrapperOrder flex flex-col max-md:mt-2.5">
+                            <button class="moreBtn text-xs flex items-center gap-1 w-fit max-md:mx-auto">
+                                <span class="pointer-events-none">Подробнее о заказе</span>  
+                                <svg width="10" height="6" viewBox="0 0 10 6" class="mt-[2px] transition-all duration-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4.0417L8.47266 0.566309C8.72969 0.309277 9.14531 0.309277 9.39961 0.566309C9.65391 0.82334 9.65391 1.23896 9.39961 1.496L5.46484 5.4335C5.21602 5.68232 4.8168 5.68779 4.55977 5.45264L0.597656 1.49873C0.469141 1.37021 0.40625 1.20068 0.40625 1.03389C0.40625 0.86709 0.469141 0.697558 0.597656 0.569043C0.854688 0.312012 1.27031 0.312012 1.52461 0.569043L5 4.0417Z" fill="black"/>
+                                </svg>
+                            </button>
+                            <div class="innerOrderInfo flex flex-col md:mt-10 mt-[30px] hidden">
+                                <ul class="flex flex-col gap-2.5">
+                                    <li><p class="font-semibold">Получатель</p></li>
+                                    <li><p class="text-xs">Иванов Виктор Алексеевич</p></li>
+                                    <li><p class="text-xs">+ 7 (906) 346-32-76</p></li>
+                                    <li><p class="text-xs">user@mail.ru</p></li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="flex flex-col w-[60%]">
+                                        <p class="font-semibold">Оплата</p>
+                                        <p class="text-xs mt-2.5">Счет №3 от 20.07.2023, оплата при получении</p>
+                                    </li>
+                                    <li class="flex items-center justify-end gap-10 grow shrink-0 min-[560px]:mr-10">
+                                        <p class="font-bold text-xs text-[#FF0000]">НЕ ОПЛАЧЕНО</p>
+                                    </li>
+                                    <li class="ml-auto max-[560px]:hidden">
+                                        <button class="flex justify-center py-3 px-5 min-w-[105px] rounded-full text-sm font-semibold bg-mainOrange text-white hover-button">Оплатить</button>
+                                    </li>
+                                </ul>
+                                <ul class="flex items-center mt-5">
+                                    <li class="w-[60%]">
+                                        <ul class="flex flex-col gap-2.5">
+                                            <li><p class="font-semibold">Доставка</p></li>
+                                            <li><p class="text-xs">Адрес: ул. Афанасьева 35, кв. 76</p></li>
+                                            <li><p class="text-xs">Служба доставки: Доставка курьером</p></li>
+                                            <li><p class="text-xs">Статус отгрузки: Ожидает обработки</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="flex justify-end grow shrink-0 min-[560px]:mr-10">
+                                        <p class="text-lg font-semibold">100 ₽</p>
+                                    </li>
+                                    <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                </ul>
+                                <ul class="flex flex-col gap-5 mt-5">
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="flex justify-between items-center">
+                                            <li class="flex flex-col w-[60%]">
+                                                <p class="font-semibold leading-[1.1]">Сегмент краба Стригуна</p>
+                                                <p class="text-xs mt-2">200 г</p>
+                                            </li>
+                                            <li class="flex items-center min-[560px]:justify-between justify-end gap-2 grow shrink-0 min-[560px]:mr-10">
+                                                <p class="text-sm max-[560px]:hidden">2 шт</p>
+                                                <p class="text-lg font-semibold">1300 ₽</p>
+                                            </li>
+                                            <li class="ml-auto min-w-[105px] max-[560px]:hidden"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+                id="tabs-address"
+                role="tabpanel"
+                aria-labelledby="tabs-address-tab">
+                <div class="max-w-[520px] xs:min-h-[500px] min-h-[300px] mx-auto rounded-[35px] min-[560px]:py-10 min-[560px]:px-16 xs:py-6 xs:px-10 px-5 py-5 bg-white">
+                    <p class="text-2xl font-semibold text-center">Сохраненные адреса</p>
+                    <form action="#" class="flex flex-col xs:gap-5 gap-2 xs:mt-10 mt-[30px] h-full">
+                        <div class="flex flex-col">
+                            <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Дом:</p>
+                            <div class="w-full rounded-full bg-[#F2F2F2] px-4 py-[13px]">
+                                <input type="radio" class="addressProfile" name="address" id="address" checked><label for="address" class="w-full">ул. Афанасьева 34, кв 89</label>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-sm font-medium xs:pb-2.5 pb-1 pl-2.5">Работа:</p>
+                            <div class="w-full rounded-full bg-[#F2F2F2] px-4 py-[13px]">
+                                <input type="radio" class="addressProfile" name="address" id="address1"><label for="address1" class="w-full">ул. Афанасьева 34, кв 89</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="flex justify-center font-semibold text-sm text-white w-full rounded-full bg-mainOrange xs:py-[14px] py-2.5 xs:mt-[100px] mt-[50px] hover-button">Добавить адрес</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Библиотеки -->
+    <script src="../src/assets/libs/jquery.js"></script>
+    <script src="../src/assets/libs/swiper.js"></script>
+    <script src="../src/assets/libs/tailwindElements.js"></script>
+    <!-- Скрипты -->
+    <script src="../src/assets/js/custom.js"></script>
+    <script src="../src/assets/js/slider.js"></script>
+</body>
+</html>

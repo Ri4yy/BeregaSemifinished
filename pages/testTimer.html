@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/css/custom.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <title>Таймер</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <section id="clockBody">
+            <section id="frontClockBody">
+                <button id="start">START</button>
+                <button id="reset">RESET</button>
+
+                <article id="clock-text">
+                    <span class="minute"></span>:<span class="sekunde"></span>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        var clockMinutes = document.querySelector('.minute');
+        var clockSeconds = document.querySelector('.sekunde');
+        var minutes = 1;
+        var seconds = 30;
+
+        clockMinutes.innerHTML = minutes;
+        clockSeconds.innerHTML = seconds;
+        var startTimer = document.querySelector('#start');
+        var status = 'START';
+
+        startTimer.addEventListener('click', startPause);
+
+
+        function startPause() {
+            // if (status === 'START') {
+            //     startTime();
+            //     status = 'RESET';
+            //     startTimer.innerHTML = status;
+            // } else if (status === 'RESET') {
+            //     // pauseTime();
+            //     resetPomodoro()
+            //     status = 'START';
+            //     startTimer.innerHTML = status;
+            // }
+            resetTimer()
+            startTime();
+        }
+
+        document.querySelector('#reset').addEventListener('click', resetTimer);
+
+
+        function resetTimer() {
+            clearInterval(countdown);
+            minutes = 1;
+            seconds = 30;
+            clockMinutes.innerHTML = minutes;
+            clockSeconds.innerHTML = seconds;
+            status = 'START';
+            startTimer.innerHTML = status;
+        }
+
+
+
+        function startTime() {
+            countdown = setInterval(startCountdown, 1000);
+        }
+
+        /*coundown script here*/
+
+        var countdown; //=setInterval(pomodoroCountdown, 1000); 
+
+        function startCountdown() {
+
+            if (minutes < 10) {
+                clockMinutes.innerHTML = '0' + minutes;
+            } else {
+                clockMinutes.innerHTML = minutes;
+            }
+
+            if (seconds < 10) {
+                clockSeconds.innerHTML = '0' + seconds;
+            } else {
+                clockSeconds.innerHTML = seconds;
+            }
+
+            console.log(minutes + ":" + seconds);
+            if (seconds < 1 && minutes > 0) {
+                minutes--;
+                seconds = 59; //add one more than on start
+            } else if (minutes === 0 && seconds === 0) {
+                clearInterval(countdown);
+                console.log('Время вышло');
+            }
+            seconds--;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

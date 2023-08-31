@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/css/custom.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <title>Берега полуфабрикаты | Поиск</title>
+</head>
+<body class="bg-lightBlue">
+    
+    <main class="xs:mt-[60px] mt-[30px] xs:mb-[100px] mb-[50px]">
+        <section class="container flex flex-col gap-5">
+            <p class="section-title montserrat-medium">РЕЗУЛЬТАТЫ <span class="text-mainOrange font-bold">ПОИСКА</span></p>
+            <form action="#" class="relative mt-[30px]">
+                <input type="text" class="py-2.5 px-4 w-full rounded-full bg-white placeholder:text-xs placeholder:font-medium outline-none" placeholder="Поиск..">
+                <button class='absolute right-0 top-1/2 -translate-y-1/2 text-xs font-medium text-white bg-mainOrange h-full rounded-r-full px-5'>Найти</button>
+            </form>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 xs:gap-5">
+                <div class="flex flex-col xs:p-5 max-xs:px-2.5 max-xs:pt-5 max-xs:pb-2.5 bg-white xs:rounded-[35px] rounded-[25px] shadow-[0_0_10px_0_rgba(38,68,98,0.10)]">
+                    <div
+                    class="flex flex-col cursor-pointer grow"
+                    data-te-toggle="modal"
+                    data-te-target="#exampleModal"
+                    data-te-ripple-init
+                    data-te-ripple-color="light">
+                        <img src="../src/assets/img/photo/cont.png" class="xs:w-[180px] xs:h-[200px] w-[114px] h-[114px] object-contain mx-auto" alt="">
+                        <p class="xs:text-[15px] text-xs font-semibold xs:mt-5 mt-3 leading-[1.1]">Сегмент краба Стригуна</p>
+                        <div class="flex justify-between items-end xs:mt-5 mt-3 grow">
+                            <span class="xs:text-sm text-xs">200 г</span>
+                            <span class="xs:text-lg text-sm font-semibold">650 ₽</span>
+                        </div>
+                    </div>
+                    <button class="w-full rounded-full bg-mainOrange xs:py-3 py-2 text-white text-sm font-bold xs:mt-5 mt-3 hover-button">В корзину</button>
+                </div>
+                <div class="flex flex-col xs:p-5 max-xs:px-2.5 max-xs:pt-5 max-xs:pb-2.5 bg-white xs:rounded-[35px] rounded-[25px] shadow-[0_0_10px_0_rgba(38,68,98,0.10)]">
+                    <div
+                    class="flex flex-col cursor-pointer grow"
+                    data-te-toggle="modal"
+                    data-te-target="#exampleModal"
+                    data-te-ripple-init
+                    data-te-ripple-color="light">
+                        <img src="../src/assets/img/photo/cardImg.png" class="xs:w-[180px] xs:h-[200px] w-[114px] h-[114px] object-contain mx-auto" alt="">
+                        <p class="xs:text-[15px] text-xs font-semibold xs:mt-5 mt-3 leading-[1.1]">Сегмент краба Стригуна</p>
+                        <div class="flex justify-between items-end xs:mt-5 mt-3 grow">
+                            <span class="xs:text-sm text-xs">200 г</span>
+                            <span class="xs:text-lg text-sm font-semibold">650 ₽</span>
+                        </div>
+                    </div>
+                    <button class="w-full rounded-full bg-mainOrange xs:py-3 py-2 text-white text-sm font-bold xs:mt-5 mt-3 hover-button">В корзину</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Библиотеки -->
+    <script src="../src/assets/libs/jquery.js"></script>
+    <script src="../src/assets/libs/swiper.js"></script>
+    <script src="../src/assets/libs/tailwindElements.js"></script>
+    <!-- Скрипты -->
+    <script src="../src/assets/js/custom.js"></script>
+    <script src="../src/assets/js/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/css/custom.css">
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <title>Берега | Авторизация тест</title>
+</head>
+
+<body>
+    <section class="flex min-h-screen relative">
+        <a href="../index.html" class="flex absolute top-[30px] z-30 right-[35px]">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L21 21M1 21L21 1" stroke="black" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </a>
+        <div class="flex justify-center items-center min-[920px]:w-1/2 relative  max-[920px]:hidden">
+            <img src="../src/assets/img/bg/authWave.png" class="absolute top-0 right-0 h-full select-none" alt="">
+            <img src="../src/assets/img/icon/authLogo.png"
+                class="select-none xl:w-[508px] xl:h-[508px] w-[400px] h-[400px]" alt="">
+        </div>
+        <div class="flex justify-center items-center min-[920px]:w-1/2 w-full bg-lightBlue relative">
+            <button class="changePhoneStep flex absolute top-[30px] z-30 left-[35px] hidden">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.002 10.9999L1.00195 10.9999" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M11 21L0.999999 11L11 1" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <img src="../src/assets/img/bg/authBg.png"
+                class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none select-none" alt="">
+            <form action="#" class="flex flex-col items-center xs:max-w-[400px] w-full z-20 px-5">
+                <div class="formAuth w-full">
+                    <p class="xs:text-2xl text-xl font-semibold text-center">Авторизация</p>
+                    <div class="relative w-full xs:mt-10 mt-5">
+                        <img src="../src/assets/img/icon/flag.png" class="absolute top-1/2 -translate-y-1/2 left-5 z-10"
+                            alt="">
+                        <input type="text" name="phone"
+                            class="phoneValue py-3 px-[52px] rounded-full outline-none w-full placeholder:text-sm placeholder:font-medium"
+                            placeholder="Телефон" required>
+                    </div>
+                    <span
+                        class="nextStepAuth startCodeTimer flex justify-center text-lg font-semibold text-white xs:py-4 py-2.5 w-full rounded-full bg-mainOrange xs:mt-10 mt-5 cursor-pointer hover-button">Войти</span>
+                    <a href="./reg.html" class="block text-sm font-medium mt-5 mx-auto w-fit">У вас еще нет
+                        аккаунта?</a>
+                </div>
+                <div class="formEnterCode w-full hidden">
+                    <p class="xs:text-2xl text-xl font-semibold text-center">Введите код</p>
+                    <p class="text-sm font-medium mt-5 leading-[1.2]">Мы отправили код подтверждения на<br> номер
+                        телефона +7 908 645 34-66</p>
+                    <div class="relative w-full mt-5">
+                        <input type="text" name="code"
+                            maxlength="4"
+                            class=" py-3 px-4 rounded-full outline-none w-full placeholder:text-sm placeholder:font-medium"
+                            placeholder="Код">
+                    </div>
+                    <p class="text-center text-sm font-medium mt-5">Получить новый код можно через <span
+                            class="minuteCode"></span>:<span class="secondCode"></span></p>
+                    <span
+                        class="confirmElse startPhoneTimer cursor-pointer block text-sm font-medium mt-5 mx-auto w-fit text-mainOrange"
+                        data-confirm="code">Подтвердить иначе</span>
+                </div>
+                <div class="formEnterDecimal w-full hidden">
+                    <p class="xs:text-2xl text-xl font-semibold text-center">Введите последние цифры</p>
+                    <p class="text-sm font-medium mt-5 leading-[1.2]">Введите последние 4 цифры номера входящего звонка.
+                        Робот произведет звонок на номер<br> +7 908 645 34-66</p>
+                    <div class="relative w-full mt-5">
+                        <input type="text" name="code"
+                            maxlength="4"
+                            class=" py-3 px-4 rounded-full outline-none w-full placeholder:text-sm placeholder:font-medium"
+                            placeholder="Код">
+                    </div>
+                    <p class="text-center text-sm font-medium mt-5">Получить новый код можно через <span
+                            class="minuteDigits"></span>:<span class="secondDigits"></span></p>
+                    <span
+                        class="confirmElse startCodeTimer cursor-pointer block text-sm font-medium mt-5 mx-auto w-fit text-mainOrange"
+                        data-confirm="decimal">Подтвердить иначе</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="../src/assets/libs/jquery.js"></script>
+    <script>
+        $('.nextStepAuth').click((e) => {
+            let val = $(e.target).parents().find('.phoneValue').val();
+            if (val.length > 11) {
+                console.log('В номере больше 11 символов')
+                $('.formAuth').toggleClass('hidden')
+                $('.formEnterCode').toggleClass('hidden')
+                $('.changePhoneStep').toggleClass('hidden')
+
+
+                $('.confirmElse').click((e) => {
+                    if ($(e.target).data('confirm') == 'code') {
+                        console.log('111111')
+                        $('.formEnterCode').addClass('hidden')
+                        $('.formEnterDecimal').removeClass('hidden')
+                    } else if ($(e.target).data('confirm') == 'decimal') {
+                        console.log('222222')
+                        $('.formEnterCode').removeClass('hidden');
+                        $('.formEnterDecimal').addClass('hidden');
+                    }
+                });
+            } else {
+                console.log('В номере меньше 11 символов')
+            }
+        });
+
+        $('.changePhoneStep').click(() => {
+            $('.formAuth').toggleClass('hidden')
+            $('.changePhoneStep').toggleClass('hidden')
+            $('.formEnterCode').addClass('hidden');
+            $('.formEnterDecimal').addClass('hidden');
+            $('.phoneValue').val('');
+            clearInterval(countdown)
+        })
+
+        let minuteCode = document.querySelector('.minuteCode'),
+            secondCode = document.querySelector('.secondCode'),
+            minuteDigits = document.querySelector('.minuteDigits'),
+            secondDigits = document.querySelector('.secondDigits');
+
+        var phoneValue = document.querySelector('.phoneValue');
+
+        let startPhoneTimer = document.querySelector('.startPhoneTimer'),
+            startCodeTimer = document.querySelectorAll('.startCodeTimer');
+
+        let minutes, seconds;
+
+        startPhoneTimer.addEventListener('click', (e) => {
+            clearInterval(countdown)
+            resetTimer(minuteDigits, secondDigits)
+            startTime(minuteDigits, secondDigits);
+        });
+
+        startCodeTimer.forEach(item => {
+            item.addEventListener('click', (e) => {
+                if(phoneValue.value.length > 11) {
+                    console.log('proverka')
+                    clearInterval(countdown)
+                    resetTimer(minuteCode, secondCode)
+                    startTime(minuteCode, secondCode);
+                }
+            });
+        })
+
+        function resetTimer(clockM, clockS) {
+            clearInterval(countdown);
+            minutes = '0' + 0;
+            seconds = 10;
+            clockM.innerHTML = minutes;
+            clockS.innerHTML = seconds;
+        }
+
+        function startTime(clockM, clockS) {
+            countdown = setInterval(() => {
+                clockM.innerHTML = minutes;
+
+                if (seconds < 10) {
+                    clockS.innerHTML = '0' + seconds;
+                } else {
+                    clockS.innerHTML = seconds;
+                }
+
+                console.log(minutes + ":" + seconds);
+                if (seconds < 1 && minutes > 0) {
+                    minutes--;
+                    seconds = 59;
+                } else if (minutes == '00' && seconds === 0) {
+                    clearInterval(countdown);
+                    console.log('Время вышло');
+                    console.log(clockM.parentNode.parentNode);
+                }
+                seconds--;
+            }, 1000);
+        }
+
+        var countdown;
+    </script>
+    <!-- Библиотеки -->
+
+    <script src="../src/assets/libs/swiper.js"></script>
+    <script src="../src/assets/libs/tailwindElements.js"></script>
+    <!-- Скрипты -->
+    <!-- <script src="../src/assets/js/custom.js"></script> -->
+    <script src="../src/assets/js/slider.js"></script>
+</body>
+
+</html>
