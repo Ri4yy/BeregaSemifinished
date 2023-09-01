@@ -4,9 +4,15 @@
 
 html,
 body {
-    /* scrollbar-gutter: stable; */
+    scrollbar-gutter: stable;
     /* overflow-x: hidden; */
     font-family: 'Open Sans', sans-serif;
+}
+
+.filterCatalog {
+    appearance: none;
+    background: url(../img/icon/Vector.svg) no-repeat right;
+    background-position-x: calc(100% - 16px);
 }
 
 .swiper-pagination-bullet {
@@ -41,7 +47,7 @@ body {
     top: 0;
     z-index: 50;
     width: 100%;
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(20px); 
     background: rgba(236,242,248,0.4) !important;
     padding: 0 !important;
 }

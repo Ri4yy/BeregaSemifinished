@@ -38,7 +38,7 @@
             <!-- Поиск десктоп -->
             <div class="search-wrapper flex justify-end w-fit relative max-lg:hidden">
                 <form action="#" class="formSearch flex justify-end mr-2.5 relative">
-                    <input type="text" class="searchInput rounded-full bg-white py-2 px-[14px] pr-[30px] h-fit outline-none z-50 w-[114px] ml-2.5 transition-all duration-300" placeholder="Поиск">
+                    <input type="text" class="searchInput rounded-full bg-white py-2 px-[14px] pr-[30px] h-fit outline-none z-50 w-[114px] ml-2.5 transition-all duration-300 placeholder:text-sm placeholder:text-[#264462]" placeholder="Поиск">
                     <button type="submit" class="absolute top-1/2 -translate-y-1/2 right-[14px] z-50">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.98674 11.9735C7.31504 11.9732 8.60505 11.5285 9.65138 10.7103L12.9411 14L13.9993 12.9418L10.7095 9.65213C11.5282 8.60569 11.9732 7.31538 11.9735 5.98674C11.9735 2.6858 9.28769 0 5.98674 0C2.6858 0 0 2.6858 0 5.98674C0 9.28768 2.6858 11.9735 5.98674 11.9735ZM5.98674 1.49669C8.46301 1.49669 10.4768 3.51048 10.4768 5.98674C10.4768 8.46301 8.46301 10.4768 5.98674 10.4768C3.51048 10.4768 1.49669 8.46301 1.49669 5.98674C1.49669 3.51048 3.51048 1.49669 5.98674 1.49669Z" fill="#264462"/>
@@ -118,7 +118,7 @@
                             d="M11.4493 8.6676C12.1055 9.04474 12.6857 9.51295 13.1807 10.084C14.1461 11.1978 14.7048 12.5092 15.037 13.9288C15.2973 15.0421 15.3991 16.1735 15.3996 17.3151C15.3996 17.7281 15.135 17.9981 14.7236 17.9981C10.0371 17.9997 5.35071 17.9997 0.664286 17.9981C0.283929 17.9981 0 17.734 0 17.3665C0.00107143 15.558 0.227679 13.7885 0.955178 12.1128C1.57982 10.6738 2.51786 9.50278 3.88768 8.70617C3.90482 8.69599 3.91929 8.68153 3.94929 8.65742C2.80929 7.36045 2.34054 5.85992 2.66357 4.15045C2.90304 2.88295 3.55982 1.85653 4.57393 1.06313C6.53625 -0.472224 9.35571 -0.324903 11.1996 1.3776C13.0896 3.12295 13.5471 6.41706 11.4493 8.66813V8.6676ZM14.1027 16.7038C14.0475 15.3828 13.8664 14.1083 13.3896 12.8917C12.825 11.4506 11.9234 10.3058 10.4989 9.62385C10.3741 9.56438 10.2857 9.57349 10.1684 9.63563C8.52107 10.5094 6.87054 10.5056 5.22482 9.63188C5.11179 9.57188 5.02821 9.56278 4.91196 9.61795C3.66107 10.2131 2.79321 11.1785 2.21089 12.4176C1.71536 13.4713 1.47536 14.5926 1.36125 15.7444C1.33018 16.061 1.31357 16.3787 1.28946 16.7033H14.1027V16.7038ZM11.55 5.13456C11.5479 3.00885 9.8175 1.2801 7.69393 1.28224C5.5725 1.28438 3.84643 3.01795 3.84857 5.14474C3.85071 7.26938 5.58214 8.99974 7.70464 8.9976C9.82554 8.99545 11.5527 7.26028 11.5505 5.13456H11.55Z" />
                     </svg>
                 </a>
-                <div class="flex items-center min-[570px]:gap-1.5 min-[570px]:bg-white min-[570px]:min-w-[100px] rounded-full min-[570px]:pr-2.5">
+                <div class="flex items-center min-[570px]:gap-2 min-[570px]:bg-white min-[570px]:min-w-[100px] rounded-full min-[570px]:pr-2.5">
                     <a href="pages/cart.html"
                         class="group relative flex justify-center items-center min-[570px]:w-9 min-[570px]:h-9 min-[570px]:bg-[#FF8336] rounded-full hover:bg-transparent min-[570px]:border-[1px] min-[570px]:border-[#FF8336] transition-all duration-300">
                         <svg width="20" height="18" viewBox="0 0 20 18"
@@ -129,7 +129,11 @@
                         </svg>
                         <div class="absolute -top-3 -right-3 text-sm text-white rounded-full bg-mainOrange min-w-[20px] min-h-[20px] max-[569px]:flex hidden justify-center items-center">99</div>
                     </a>
-                    <span class="font-semibold min-[570px]:block hidden">650 ₽</span>
+                    <span class="font-semibold min-[570px]:flex items-center gap-1 hidden">650 
+                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.46161 12H3.82811V9.88235H7.92761V8.47059H3.82811V7.05882H6.90274C8.78646 7.05882 10.319 5.47553 10.319 3.52941C10.319 1.58329 8.78646 0 6.90274 0H3.14486C2.96365 0 2.78987 0.0743697 2.66173 0.206748C2.5336 0.339127 2.46161 0.518671 2.46161 0.705882V5.64706H0.411865V7.05882H2.46161V8.47059H0.411865V9.88235H2.46161V12ZM3.82811 1.41176H6.90274C8.03283 1.41176 8.95249 2.36188 8.95249 3.52941C8.95249 4.69694 8.03283 5.64706 6.90274 5.64706H3.82811V1.41176Z" fill="black"/>
+                        </svg>
+                    </span>
                 </div>
             </div>
         </div>
@@ -179,7 +183,7 @@
                                     <span class="uppercase text-[#264462] montserrat-semibold xs:text-[60px] text-[43px] leading-[1] -ml-[2px]">продуктов</span>
                                 </p>
                                 <img src="src/assets/img/slider/firstBanner.png" class="min-[850px]:hidden flex mt-[30px]" alt="">
-                                <p class="xs:text-lg text-xs leading-[1.3] montserrat-regular mt-4 text-center min-[850px]:text-start">Морские деликатесы теперь на расстоянии клика! Погрузитесь в мир вкуса и утонченности с нашими 
+                                <p class="text-sm leading-[1.3] montserrat-regular mt-4 text-center min-[850px]:text-start">Морские деликатесы теперь на расстоянии клика! Погрузитесь в мир вкуса и утонченности с нашими 
                                     свежими морепродуктами. Закажите сейчас и дарите себе незабываемые гастрономические моменты.
                                 </p>
                                 <a href="pages/catalog.html" class="flex justify-center max-[850px]:mx-auto xs:text-base text-xs xs:py-[14px] py-3 px-16 rounded-full bg-mainOrange montserrat-medium text-white xs:w-fit w-full min-[850px]:mt-10 mt-5 hover:bg-transparent border-[1px] hover:border-mainOrange hover:text-mainOrange active:bg-[#ffa167] active:text-white transition-colors duration-300">
@@ -198,7 +202,7 @@
                                     <span class="uppercase text-[#264462] montserrat-semibold xs:text-[60px] text-[43px] leading-[1] -ml-[2px]">продуктов</span>
                                 </p>
                                 <img src="src/assets/img/slider/firstBanner.png" class="min-[850px]:hidden flex mt-[30px]" alt="">
-                                <p class="xs:text-lg text-xs leading-[1.3] montserrat-regular mt-4 text-center min-[850px]:text-start">Морские деликатесы теперь на расстоянии клика! Погрузитесь в мир вкуса и утонченности с нашими 
+                                <p class="text-sm leading-[1.3] montserrat-regular mt-4 text-center min-[850px]:text-start">Морские деликатесы теперь на расстоянии клика! Погрузитесь в мир вкуса и утонченности с нашими 
                                     свежими морепродуктами. Закажите сейчас и дарите себе незабываемые гастрономические моменты.
                                 </p>
                                 <a href="pages/catalog.html" class="flex justify-center max-[850px]:mx-auto xs:text-base text-xs xs:py-[14px] py-3 px-16 rounded-full bg-mainOrange montserrat-medium text-white xs:w-fit w-full min-[850px]:mt-10 mt-5 hover:bg-transparent border-[1px] hover:border-mainOrange hover:text-mainOrange active:bg-[#ffa167] active:text-white transition-colors duration-300">
@@ -383,7 +387,7 @@
             </div>
         </section>
 
-        <section class="bg-lightBlue relative pb-10">
+        <section class="bg-lightBlue relative pb-[100px]">
             <img src="src/assets/img/bg/topWave.png" class="absolute top-0 left-0 w-full select-none" alt="">
             <p class="section-title montserrat-medium xl:pt-[260px] lg:pt-[150px] md:pt-[120px] xs:pt-[100px] pt-[60px]">МЫ <span class="text-mainOrange font-bold">РЕКОМЕНДУЕМ</span></p>
             <div class="container grid md:grid-cols-2 gap-10 mt-10">
